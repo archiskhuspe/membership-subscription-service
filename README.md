@@ -1,4 +1,4 @@
-# Membership Subscription Service
+# Miembro — Membership Subscription Service
 
 ![Java](https://img.shields.io/badge/Java-17-blue?logo=openjdk)
 ![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.2.6-brightgreen?logo=springboot)
@@ -6,7 +6,7 @@
 ![H2](https://img.shields.io/badge/Database-H2%20In--Memory-lightblue)
 ![License](https://img.shields.io/badge/License-MIT-yellow)
 
-A REST API for a tiered membership subscription system built with Java 17 and Spring Boot 3. Supports three membership plans (Monthly, Quarterly, Yearly) across three benefit tiers (Silver, Gold, Platinum) with full lifecycle management: subscribe, upgrade, downgrade, cancel, and renew.
+Miembro is a REST API for a tiered membership subscription system built with Java 17 and Spring Boot 3. Supports three membership plans (Monthly, Quarterly, Yearly) across three benefit tiers (Silver, Gold, Platinum) with full lifecycle management: subscribe, upgrade, downgrade, cancel, and renew.
 
 ---
 
