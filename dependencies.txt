@@ -1,6 +1,0 @@
-spring-boot-starter-parent
-spring-boot-starter-web
-spring-boot-starter-data-jpa
-h2
-spring-boot-starter-validation
-springdoc-openapi-ui

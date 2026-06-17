@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.*;
 import com.firstclub.membership.model.Plan;
 import com.firstclub.membership.model.Tier;
 import com.firstclub.membership.model.Benefit;
-import org.springframework.beans.factory.annotation.Autowired;
 import java.util.List;
 import java.util.Map;
 import com.firstclub.membership.repository.PlanRepository;
@@ -24,17 +23,11 @@ import com.firstclub.membership.repository.UserRepository;
 @RequiredArgsConstructor
 public class MembershipController {
     private final MembershipService membershipService;
-
-    @Autowired
-    private PlanRepository planRepository;
-    @Autowired
-    private TierRepository tierRepository;
-    @Autowired
-    private BenefitRepository benefitRepository;
-    @Autowired
-    private TierBenefitRepository tierBenefitRepository;
-    @Autowired
-    private UserRepository userRepository;
+    private final PlanRepository planRepository;
+    private final TierRepository tierRepository;
+    private final BenefitRepository benefitRepository;
+    private final TierBenefitRepository tierBenefitRepository;
+    private final UserRepository userRepository;
 
     @PostMapping("/subscribe")
     public ResponseEntity<SubscribeResponse> subscribe(@RequestBody SubscribeRequest request) {

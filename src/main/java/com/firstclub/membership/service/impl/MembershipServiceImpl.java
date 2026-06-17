@@ -65,12 +65,7 @@ public class MembershipServiceImpl implements MembershipService {
             response.setStatus("ALREADY_SUBSCRIBED");
             return response;
         }
-        // Mock payment flow: always succeed
-        boolean paymentSuccess = true;
-        if (!paymentSuccess) {
-            response.setStatus("PAYMENT_FAILED");
-            return response;
-        }
+        // Mock payment flow: always succeeds
         // Assign default tier from plan
         Tier tier = plan.getDefaultTier();
         LocalDateTime now = LocalDateTime.now();
@@ -217,10 +212,11 @@ public class MembershipServiceImpl implements MembershipService {
             response.setStatus("MEMBERSHIP_USER_MISMATCH");
             return response;
         }
-        // Mock payment: always succeed
+        // Mock payment: always succeeds
         LocalDateTime newExpiry = membership.getExpiryDate().plusMonths(membership.getPlan().getDurationMonths());
         membership.setExpiryDate(newExpiry);
         membership.setNextRenewalAt(newExpiry);
+        membership.setLastRenewedAt(LocalDateTime.now());
         membership.setStatus("active");
         membershipRepository.save(membership);
         response.setMembershipId(membership.getId());
