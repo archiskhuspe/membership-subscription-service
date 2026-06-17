@@ -1,4 +1,4 @@
-# membership-subscription-service
+# Membership Subscription Service
 
 ![Java](https://img.shields.io/badge/Java-17-blue?logo=openjdk)
 ![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.2.6-brightgreen?logo=springboot)
